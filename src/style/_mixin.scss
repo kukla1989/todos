@@ -1,0 +1,27 @@
+@mixin onPhone {
+  @media (max-width: 619px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: 620px) {
+    @content;
+  }
+}
+
+@mixin border {
+  box-shadow: 0 0 10px 0 #e5e5e5;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin pinkShadow {
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 10px 0px $cRaspberryPink;
+  }
+}

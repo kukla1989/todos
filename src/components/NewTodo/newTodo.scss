@@ -1,0 +1,56 @@
+.new-todo {
+  min-width: 370px;
+  min-height: 84px;
+  padding: 0 24px;
+  margin-bottom: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 0 10px 0 #e5e5e5;
+  border-radius: 12px;
+
+  @include onPhone {
+    min-width: 300px;
+    min-height: 50px;
+    padding: 0 12px;
+    margin-bottom: 7px;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    @include onPhone {
+      gap: 20px;
+    }
+  }
+
+  @mixin sizeAndBorder {
+    height: 40px;
+    padding: 0 10px;
+
+    font-size: 18px;
+    border-radius: 12px;
+    @include border;
+
+    @include onPhone {
+      font-size: 14px;
+      height: 28px;
+    }
+  }
+
+  &__input {
+    @include sizeAndBorder;
+  }
+
+  &__submit {
+    @include sizeAndBorder;
+    @include pinkShadow;
+    background-color: $cRaspberryPink;
+    color: $cWhite;
+  }
+}

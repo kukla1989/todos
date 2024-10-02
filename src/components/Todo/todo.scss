@@ -1,0 +1,89 @@
+.todo {
+  min-width: 370px;
+  min-height: 84px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  margin-bottom: 15px;
+
+  box-shadow: 0 0 10px 0 $cGray;
+  border-radius: 12px;
+
+  @include onPhone {
+    min-width: 300px;
+    min-height: 50px;
+    padding: 0 12px;
+    margin-bottom: 7px;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__info--completed {
+    color: $cDarkGray;
+    text-decoration: line-through;
+  }
+
+  &__info {
+    margin: 0;
+  }
+
+  &__date {
+    padding: 5px;
+    display: inline-block; 
+
+    font-size: 12px;
+    font-weight: 600;
+    color: $cDarkPink;
+    background-color: $cLightPink;
+    border-radius: 5px;
+  }
+
+  &__tools {
+    display: flex;
+    gap: 12px;
+  }
+}
+
+.todo__is-complete {
+  position: relative;
+  border: 2px solid $cRaspberryPink;
+  border-radius: 2px;
+  background: none;
+  cursor: pointer;
+  line-height: 0;
+  margin: 0 0.6em 0 0;
+  outline: 0;
+  padding: 0 !important;
+  vertical-align: text-top;
+  height: 20px;
+  width: 20px;
+  -webkit-appearance: none;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:checked {
+    background-color: $cRaspberryPink;
+    opacity: 1;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    width: 4px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    margin: -1px -1px 0 -1px;
+    transform: rotate(45deg) translate(-50%, -50%);
+    z-index: 2;
+  }
+}

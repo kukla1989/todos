@@ -1,0 +1,49 @@
+.todos {
+  min-height: 30vh;
+  max-width: 80vw;
+  padding: 30px;
+
+  background-color: $cWhite;
+  border-radius: 23px;
+
+  @include onPhone {
+    max-width: none;
+    margin: 0 5px 0 5px;
+    padding: 5px;
+  }
+
+  &__filter {
+    margin: 5px;
+    background: none;
+    border: 1px solid $cLightPink;
+    border-radius: 5px;
+    @include pinkShadow;
+  }
+
+  &__filter--active {
+    background-color: $cRaspberryPink;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 600;
+
+    @include onPhone {
+      font-size: 18px;
+    }
+  }
+
+  &__empty {
+    width: 270px;
+    margin: 30px 0;
+    text-align: center;
+    color: $cSoftPink;
+  }
+}
+
+.newSVG {
+  &:hover {
+    filter: drop-shadow(0px 4px 10px $cRaspberryPink);
+    overflow: visible;
+  }
+}
